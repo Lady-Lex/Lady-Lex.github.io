@@ -3,10 +3,13 @@ languageCode = "zh-cn"
 title = "Lex's Test Site"
 theme = "PaperMod"
 
-# GitHub Pages 配置
+
 [build]
   publishDir = "public"
 
+# 内容配置
 [params]
   defaultTheme = "auto"
   ShowCodeCopyButtons = true
+  # 指定在首页显示的内容类型
+  mainSections = ["posts"]
