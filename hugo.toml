@@ -1,0 +1,12 @@
+baseURL = "https://Lady-Lex.github.io/"
+languageCode = "zh-cn"
+title = "Lex's Test Site"
+theme = "PaperMod"
+
+# GitHub Pages 配置
+[build]
+  publishDir = "public"
+
+[params]
+  defaultTheme = "auto"
+  ShowCodeCopyButtons = true
