@@ -4,6 +4,7 @@ date: 2025-11-06
 tags: ["CNN", "Deep Learning", "PyTorch", "Computer Vision", "Cheatsheet", "Exam"]
 categories: ["CEG5304"]
 draft: false
+summary: "CNN implementation guide with convolution/pooling operations, complete architectures, training loops, and parameter calculations for lab exam."
 ---
 
 # CNN Coding Cheatsheet

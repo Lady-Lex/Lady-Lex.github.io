@@ -4,6 +4,7 @@ date: 2025-11-06
 tags: ["RNN", "LSTM", "GRU", "Deep Learning", "PyTorch", "Sequence", "Cheatsheet", "Exam"]
 categories: ["CEG5304"]
 draft: false
+summary: "Complete RNN/LSTM/GRU implementations including sequence models, attention mechanism, and time series prediction for lab exam preparation."
 ---
 
 # RNN Coding Cheatsheet
