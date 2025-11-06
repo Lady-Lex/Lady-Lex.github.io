@@ -1,26 +1,11 @@
 ---
-title: "CEG5304 – Week 2 Coding Template Cheatsheet"
-date: 2025-11-06T23:51:59+08:00
-slug: ceg5304---week-2-coding-template-cheatsheet
+title: "CEG5304 Week 2 Coding Cheatsheet"
+date: 2025-11-06
+tags: ["CEG5304", "Week2", "KNN", "SVM", "Softmax", "Cheatsheet", "Coding", "Exam", "NumPy"]
+categories: ["CEG5304"]
 draft: false
-description: "Pure NumPy KNN, distance metrics, cross-validation, linear scores, SVM/Softmax losses and gradients."
-tags:
-  - cheatsheet
-  - numpy
-  - knn
-  - svm
-  - softmax
-  - week2
-categories:
-  - CEG5304
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
-  defaultMarkdownHandler: goldmark
-params:
-  math: true
 ---
+
 # CEG5304 – Week 2 Coding Template Cheatsheet (Markdown)
 
 > Copy-paste sections as needed. All code is **pure NumPy**, no torch.  

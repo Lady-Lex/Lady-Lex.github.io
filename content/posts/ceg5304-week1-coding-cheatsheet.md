@@ -1,27 +1,14 @@
 ---
-title: "CEG5304 – Week 1 Coding Cheatsheet"
-date: 2025-11-06T23:51:59+08:00
-slug: ceg5304---week-1-coding-cheatsheet
+title: "CEG5304 Week 1 Coding Cheatsheet"
+date: 2025-11-06
+tags: ["CEG5304", "Week1", "Cheatsheet", "NumPy", "Machine Learning", "Coding", "Exam"]
+categories: ["CEG5304"]
 draft: false
-description: "Numpy-first templates for preprocessing, loss functions, linear/ridge regression, CV, metrics, and utilities."
-tags:
-  - cheatsheet
-  - numpy
-  - exam
-  - coding
-  - week1
-categories:
-  - CEG5304
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
-  defaultMarkdownHandler: goldmark
-params:
-  math: true
 ---
-CEG5304 Lab Exam Coding Cheatsheet
-1. 数据预处理 (Data Preprocessing)
+
+# CEG5304 Lab Exam Coding Cheatsheet
+
+## 1. 数据预处理 (Data Preprocessing)
 Z-score 归一化
 
 ```python
