@@ -4,6 +4,7 @@ date: 2025-11-06
 tags: ["CEG5304", "Week1", "Cheatsheet", "NumPy", "Machine Learning", "Coding", "Exam"]
 categories: ["CEG5304"]
 draft: false
+summary: "Machine learning fundamentals including data preprocessing, loss functions, linear regression, evaluation metrics, and feature engineering with NumPy."
 ---
 
 # CEG5304 Lab Exam Coding Cheatsheet

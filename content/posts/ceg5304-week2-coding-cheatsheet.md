@@ -4,6 +4,7 @@ date: 2025-11-06
 tags: ["CEG5304", "Week2", "KNN", "SVM", "Softmax", "Cheatsheet", "Coding", "Exam", "NumPy"]
 categories: ["CEG5304"]
 draft: false
+summary: "K-Nearest Neighbors, SVM hinge loss, Softmax cross-entropy, distance metrics, and linear classifiers with gradient computation using NumPy."
 ---
 
 # CEG5304 – Week 2 Coding Template Cheatsheet (Markdown)

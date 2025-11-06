@@ -4,6 +4,7 @@ date: 2025-11-06
 tags: ["Transformer", "Deep Learning", "NumPy", "Attention", "Cheatsheet", "Exam"]
 categories: ["CEG5304"]
 draft: false
+summary: "Complete Transformer implementation with attention mechanisms, positional encoding, multi-head attention, and layer normalization using pure NumPy."
 ---
 
 # Transformer Coding Cheatsheet (NumPy Only)
