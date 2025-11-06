@@ -1,6 +1,6 @@
 ---
 title: "RNN Coding Cheatsheet"
-date: 2025-11-06
+date: 2025-11-06T14:00:00+08:00
 tags: ["RNN", "LSTM", "GRU", "Deep Learning", "PyTorch", "Sequence", "Cheatsheet", "Exam"]
 categories: ["CEG5304"]
 draft: false

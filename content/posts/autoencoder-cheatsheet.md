@@ -1,6 +1,6 @@
 ---
 title: "Autoencoder Coding Cheatsheet"
-date: 2025-11-06
+date: 2025-11-06T15:00:00+08:00
 tags: ["Autoencoder", "Deep Learning", "PyTorch", "Denoising", "Cheatsheet", "Exam"]
 categories: ["CEG5304"]
 draft: false

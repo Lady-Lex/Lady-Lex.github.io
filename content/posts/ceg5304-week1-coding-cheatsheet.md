@@ -1,6 +1,6 @@
 ---
 title: "CEG5304 Week 1 Coding Cheatsheet"
-date: 2025-11-06
+date: 2025-11-06T09:00:00+08:00
 tags: ["CEG5304", "Week1", "Cheatsheet", "NumPy", "Machine Learning", "Coding", "Exam"]
 categories: ["CEG5304"]
 draft: false

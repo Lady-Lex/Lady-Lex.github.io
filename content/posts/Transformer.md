@@ -1,6 +1,6 @@
 ---
 title: "Transformer Coding Cheatsheet (NumPy Only)"
-date: 2025-11-06
+date: 2025-11-06T16:00:00+08:00
 tags: ["Transformer", "Deep Learning", "NumPy", "Attention", "Cheatsheet", "Exam"]
 categories: ["CEG5304"]
 draft: false

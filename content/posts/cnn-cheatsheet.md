@@ -1,6 +1,6 @@
 ---
 title: "CNN Coding Cheatsheet"
-date: 2025-11-06
+date: 2025-11-06T11:00:00+08:00
 tags: ["CNN", "Deep Learning", "PyTorch", "Computer Vision", "Cheatsheet", "Exam"]
 categories: ["CEG5304"]
 draft: false
