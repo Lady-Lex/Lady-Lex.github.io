@@ -1,15 +1,11 @@
 ---
 title: "Autoencoder Coding Cheatsheet"
 date: 2025-11-06T15:00:00+08:00
+weight: 450
 tags: ["Autoencoder", "Deep Learning", "PyTorch", "Denoising", "Cheatsheet", "Exam"]
 categories: ["CEG5304"]
 draft: false
 summary: "Complete autoencoder implementations including basic AE, denoising AE, stacked AE, and convolutional AE for EE5934/6934 lab exam preparation."
----
-
-# Autoencoder Coding Cheatsheet
-## EE5934/6934 Lab Exam Preparation
-
 ---
 
 ## 🔧 Autoencoder Implementations

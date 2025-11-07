@@ -1,6 +1,6 @@
 baseURL = "https://Lady-Lex.github.io/"
-languageCode = "zh-cn"
-title = "Lex's Test Site"
+languageCode = "en-us"
+title = "Lex's Lite Page"
 theme = "PaperMod"
 
 

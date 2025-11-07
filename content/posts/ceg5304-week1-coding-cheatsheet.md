@@ -1,13 +1,12 @@
 ---
 title: "CEG5304 Week 1 Coding Cheatsheet"
 date: 2025-11-06T09:00:00+08:00
+weight: 200
 tags: ["CEG5304", "Week1", "Cheatsheet", "NumPy", "Machine Learning", "Coding", "Exam"]
 categories: ["CEG5304"]
 draft: false
 summary: "Machine learning fundamentals including data preprocessing, loss functions, linear regression, evaluation metrics, and feature engineering with NumPy."
 ---
-
-# CEG5304 Lab Exam Coding Cheatsheet
 
 ## 1. 数据预处理 (Data Preprocessing)
 Z-score 归一化

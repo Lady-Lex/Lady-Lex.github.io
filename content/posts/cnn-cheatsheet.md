@@ -1,15 +1,11 @@
 ---
 title: "CNN Coding Cheatsheet"
 date: 2025-11-06T11:00:00+08:00
+weight: 500
 tags: ["CNN", "Deep Learning", "PyTorch", "Computer Vision", "Cheatsheet", "Exam"]
 categories: ["CEG5304"]
 draft: false
 summary: "CNN implementation guide with convolution/pooling operations, complete architectures, training loops, and parameter calculations for lab exam."
----
-
-# CNN Coding Cheatsheet
-## EE5934/6934 Lab Exam Preparation
-
 ---
 
 ## 📋 Quick Reference: Output Size Formulas

@@ -1,15 +1,11 @@
 ---
 title: "Transformer Coding Cheatsheet (NumPy Only)"
 date: 2025-11-06T16:00:00+08:00
+weight: 700
 tags: ["Transformer", "Deep Learning", "NumPy", "Attention", "Cheatsheet", "Exam"]
 categories: ["CEG5304"]
 draft: false
 summary: "Complete Transformer implementation with attention mechanisms, positional encoding, multi-head attention, and layer normalization using pure NumPy."
----
-
-# Transformer Coding Cheatsheet (NumPy Only)
-## Lab Exam Ready Reference - Lecture 1-6
-
 ---
 
 ## 1. Scaled Dot-Product Attention
