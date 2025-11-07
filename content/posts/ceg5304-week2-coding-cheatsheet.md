@@ -8,8 +8,7 @@ draft: false
 summary: "K-Nearest Neighbors, SVM hinge loss, Softmax cross-entropy, distance metrics, and linear classifiers with gradient computation using NumPy."
 ---
 
-> Copy-paste sections as needed. All code is **pure NumPy**, no torch.  
-> Inline math uses `$…$`, blocks use `$$…$$` per your preference.
+> Copy-paste sections as needed. All code is **pure NumPy**, no torch.
 
 ---
 

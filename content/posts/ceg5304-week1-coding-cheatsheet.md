@@ -9,7 +9,10 @@ summary: "Machine learning fundamentals including data preprocessing, loss funct
 ---
 
 ## 1. 数据预处理 (Data Preprocessing)
-Z-score 归一化
+
+### 1.1 数据归一化 (Normalization)
+
+#### 1.1.1 Z-score 归一化
 
 ```python
 import numpy as np
@@ -28,7 +31,7 @@ data = np.array([[1, 2], [3, 4], [5, 6]])
 normalized, mu, sigma = z_score_normalize(data)
 ```
 
-Min-Max 归一化
+#### 1.1.2 Min-Max 归一化
 
 ```python
 def min_max_normalize(data, feature_range=(0, 1)):
@@ -53,7 +56,9 @@ data = np.array([[1, 2], [3, 4], [5, 6]])
 normalized, min_v, max_v = min_max_normalize(data)
 ```
 
-One-Hot 编码
+### 1.2 数据编码 (Encoding)
+
+#### 1.2.1 One-Hot 编码
 
 ```python
 def one_hot_encode(labels, num_classes=None):
@@ -73,7 +78,9 @@ one_hot = one_hot_encode(labels, num_classes=3)
 # 输出: [[1,0,0], [0,1,0], [0,0,1], [0,1,0], [1,0,0]]
 ```
 
-异常值处理
+### 1.3 异常值处理 (Outlier Detection)
+
+#### 1.3.1 Z-score 方法
 
 ```python
 def remove_outliers_zscore(data, threshold=3):
@@ -83,7 +90,11 @@ def remove_outliers_zscore(data, threshold=3):
     z_scores = np.abs((data - np.mean(data)) / np.std(data))
     mask = z_scores < threshold
     return data[mask]
+```
 
+#### 1.3.2 IQR 方法
+
+```python
 def remove_outliers_iqr(data):
     """
     使用 IQR (Interquartile Range) 方法移除异常值
@@ -99,8 +110,11 @@ def remove_outliers_iqr(data):
     return data[mask]
 ```
 
-2. 损失函数 (Loss Functions)
-0-1 Loss (分类)
+## 2. 损失函数 (Loss Functions)
+
+### 2.1 分类损失函数
+
+#### 2.1.1 0-1 Loss
 
 ```python
 def zero_one_loss(y_pred, y_true):
@@ -115,7 +129,22 @@ y_true = np.array([0, 1, 0, 0, 1])
 loss = zero_one_loss(y_pred, y_true)  # 0.2
 ```
 
-L2 Loss / MSE (回归)
+#### 2.1.2 Cross-Entropy Loss
+
+```python
+def cross_entropy_loss(y_pred, y_true):
+    """
+    Cross-Entropy Loss (假设 y_pred 是概率分布)
+    L = -Σ y_true * log(y_pred)
+    """
+    epsilon = 1e-15  # 防止 log(0)
+    y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
+    return -np.mean(y_true * np.log(y_pred))
+```
+
+### 2.2 回归损失函数
+
+#### 2.2.1 L2 Loss / MSE
 
 ```python
 def l2_loss(y_pred, y_true):
@@ -138,7 +167,7 @@ y_true = np.array([1.0, 2.0, 3.0])
 loss = l2_loss(y_pred, y_true)
 ```
 
-MAE (Mean Absolute Error)
+#### 2.2.2 MAE (Mean Absolute Error)
 
 ```python
 def mae_loss(y_pred, y_true):
@@ -148,21 +177,9 @@ def mae_loss(y_pred, y_true):
     return np.mean(np.abs(y_pred - y_true))
 ```
 
-Cross-Entropy Loss (分类)
+## 3. 线性回归模型 (Linear Regression)
 
-```python
-def cross_entropy_loss(y_pred, y_true):
-    """
-    Cross-Entropy Loss (假设 y_pred 是概率分布)
-    L = -Σ y_true * log(y_pred)
-    """
-    epsilon = 1e-15  # 防止 log(0)
-    y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
-    return -np.mean(y_true * np.log(y_pred))
-```
-
-3. 线性回归模型 (Linear Regression)
-基础线性回归
+### 3.1 基础线性回归
 
 ```python
 class LinearRegression:
@@ -215,7 +232,7 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_train)
 ```
 
-带正则化的线性回归 (Ridge Regression)
+### 3.2 带正则化的线性回归 (Ridge Regression)
 
 ```python
 class RidgeRegression(LinearRegression):
@@ -243,8 +260,9 @@ class RidgeRegression(LinearRegression):
             self.bias -= self.lr * db
 ```
 
-4. 训练与评估流程
-数据集划分
+## 4. 训练与评估流程 (Training & Evaluation)
+
+### 4.1 数据集划分
 
 ```python
 def train_test_split(X, y, test_size=0.2, random_state=None):
@@ -269,7 +287,7 @@ def train_test_split(X, y, test_size=0.2, random_state=None):
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 ```
 
-完整训练流程
+### 4.2 完整训练流程
 
 ```python
 def train_and_evaluate(X, y, model, test_size=0.2):
@@ -299,7 +317,7 @@ def train_and_evaluate(X, y, model, test_size=0.2):
     return model, train_loss, test_loss
 ```
 
-K-Fold 交叉验证
+### 4.3 K-Fold 交叉验证
 
 ```python
 def k_fold_cross_validation(X, y, model, k=5):
@@ -333,8 +351,9 @@ def k_fold_cross_validation(X, y, model, k=5):
     return np.mean(scores), np.std(scores)
 ```
 
-5. 评估指标 (Metrics)
-回归指标
+## 5. 评估指标 (Evaluation Metrics)
+
+### 5.1 回归指标
 
 ```python
 def r2_score(y_pred, y_true):
@@ -352,7 +371,9 @@ def rmse(y_pred, y_true):
     return np.sqrt(l2_loss(y_pred, y_true))
 ```
 
-分类指标
+### 5.2 分类指标
+
+#### 5.2.1 准确率 (Accuracy)
 
 ```python
 def accuracy(y_pred, y_true):
@@ -360,7 +381,11 @@ def accuracy(y_pred, y_true):
     准确率
     """
     return np.mean(y_pred == y_true)
+```
 
+#### 5.2.2 混淆矩阵 (Confusion Matrix)
+
+```python
 def confusion_matrix(y_pred, y_true, num_classes):
     """
     混淆矩阵
@@ -369,7 +394,11 @@ def confusion_matrix(y_pred, y_true, num_classes):
     for true_label, pred_label in zip(y_true, y_pred):
         matrix[true_label, pred_label] += 1
     return matrix
+```
 
+#### 5.2.3 精确率、召回率和 F1 分数
+
+```python
 def precision_recall_f1(y_pred, y_true, pos_label=1):
     """
     精确率、召回率和 F1 分数 (二分类)
@@ -385,9 +414,9 @@ def precision_recall_f1(y_pred, y_true, pos_label=1):
     return precision, recall, f1
 ```
 
+## 6. 特征工程 (Feature Engineering)
 
-6. 特征工程
-多项式特征
+### 6.1 多项式特征
 
 ```python
 def polynomial_features(X, degree=2):
@@ -405,7 +434,7 @@ def polynomial_features(X, degree=2):
     return np.hstack(features)
 ```
 
-特征标准化类
+### 6.2 特征标准化类
 
 ```python
 class StandardScaler:
@@ -429,8 +458,9 @@ class StandardScaler:
         return X * self.std + self.mean
 ```
 
-7. 可视化
-训练过程可视化
+## 7. 可视化 (Visualization)
+
+### 7.1 训练过程可视化
 
 ```python
 import matplotlib.pyplot as plt
@@ -446,7 +476,11 @@ def plot_training_curve(losses, title="Training Loss"):
     plt.title(title)
     plt.grid(True)
     plt.show()
+```
 
+### 7.2 预测结果可视化
+
+```python
 def plot_predictions(y_true, y_pred, title="Predictions vs True Values"):
     """
     绘制预测值 vs 真实值
@@ -463,8 +497,9 @@ def plot_predictions(y_true, y_pred, title="Predictions vs True Values"):
     plt.show()
 ```
 
-8. 常用工具函数
-数据加载
+## 8. 常用工具函数 (Utility Functions)
+
+### 8.1 数据加载
 
 ```python
 def load_csv_data(filepath, delimiter=',', has_header=True):
@@ -477,7 +512,7 @@ def load_csv_data(filepath, delimiter=',', has_header=True):
     return X, y
 ```
 
-Batch 生成器
+### 8.2 Batch 生成器
 
 ```python
 def batch_generator(X, y, batch_size=32, shuffle=True):
@@ -501,8 +536,9 @@ for X_batch, y_batch in batch_generator(X_train, y_train, batch_size=32):
     pass
 ```
 
-9. 快速检查清单
-考前必查
+## 9. 快速检查清单 (Quick Reference)
+
+### 9.1 考前必查
 
 ```python
 # ✅ NumPy 基础操作
@@ -524,7 +560,7 @@ np.where(), np.clip()
 np.concatenate(), np.stack(), np.hstack(), np.vstack()
 ```
 
-常见错误检查
+### 9.2 常见错误检查
 
 ```python
 # ⚠️ 防止除零
