@@ -23,7 +23,7 @@ theme = "PaperMod"
   defaultTheme = "auto"
   ShowCodeCopyButtons = true
   mainSections = ["posts"]
-  ShowToc = true                 # 显示目录
-  TocOpen = true                 # 默认展开目录（便于快速导航）
-  math = true                    # 启用数学支持
+  ShowToc = true
+  TocOpen = true
+  math = true
   
